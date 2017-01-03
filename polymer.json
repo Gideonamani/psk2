@@ -1,12 +1,13 @@
 {
   "entrypoint": "index.html",
-  "shell": "src/my-app.html",
+  "shell": "src/our-app.html",
   "fragments": [
-    "src/my-view1.html",
-    "src/my-view2.html",
-    "src/my-view3.html",
-    "src/my-new-view.html",
-    "src/my-view404.html"
+    "src/our-home.html",
+    "src/our-news.html",
+    "src/our-about.html",
+    "src/our-contact.html",
+    "src/our-social.html",
+    "src/our-view404.html"
   ],
   "sourceGlobs": [
    "src/**/*",
