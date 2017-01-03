@@ -1,5 +1,7 @@
 <link rel="import" href="../bower_components/polymer/polymer.html">
 <link rel="import" href="../bower_components/paper-slider/paper-slider.html">
+<link rel="import" href="../bower_components/paper-tabs/paper-tabs.html">
+<link rel="import" href="../bower_components/iron-pages/iron-pages.html">
 <link rel="import" href="../bower_components/paper-toggle-button/paper-toggle-button.html">
 
 <dom-module id="my-new-view">
@@ -9,17 +11,39 @@
       :host {
         display: block;
 
-        padding: 16px;
+        /*padding: 16px;*/
+      }
+      paper-tabs {
+        --paper-tabs: {
+          font-style: italic;
+          font-weight: bold;
+          background-color: rgba(67, 135, 244, 0.92);
+          color: ivory;
+        };
       }
     </style>
 
-    <h1>New view</h1>
+    <!--<h1>New view</h1>
     <paper-slider min="-100" max="100" value="50"></paper-slider>
 
     <paper-toggle-button>Toggle</paper-toggle-button>
     <paper-toggle-button checked>Toggle</paper-toggle-button>
     <paper-toggle-button disabled>Disabled</paper-toggle-button>
-    <paper-toggle-button invalid>Invalid</paper-toggle-button>
+    <paper-toggle-button invalid>Invalid</paper-toggle-button>-->
+
+
+    <paper-tabs selected="{{selected}}" fallback-selection="1">
+      <paper-tab>Tab 1</paper-tab>
+      <paper-tab>Tab 2</paper-tab>
+      <paper-tab>Tab 3</paper-tab>
+    </paper-tabs>
+
+
+    <iron-pages selected="{{selected}}">
+      <div>Page 1</div>
+      <div>Page 2</div>
+      <div>Page 3</div>
+    </iron-pages>  
   </template>
   <!-- Creates the element's prototype and registers it -->
   <script>
