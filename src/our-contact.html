@@ -24,12 +24,18 @@
           color: ivory;
         };
       }
+      paper-tabs[noink] paper-tab.iron-selected {
+        color: red;
+      }
       paper-tabs#pt paper-tab a {
         height: 100%;
         text-align: center;
         justify-content: center;
         align-items: center;
         display: flex;
+      }
+      paper-tabs#pt paper-tab a:active {
+        color: turquoise;
       }
     </style>
 
@@ -43,7 +49,7 @@
     <app-location route="{{route}}"></app-location>
     <app-route route="{{route}}" pattern="/contact/:page" data="{{data}}" tail="{{tail}}"></app-route>
 
-    <paper-tabs id="pt" selected="{{data.page}}" attr-for-selected='key' fallback-selection="0">
+    <paper-tabs id="pt" selected="{{data.page}}" attr-for-selected='key' fallback-selection="0" noink>
       <paper-tab key="0"><a href="/contact/0">Tab 1</a></paper-tab>
       <paper-tab key="1"><a href="/contact/1">Tab 2</a></paper-tab>
       <paper-tab key="2"><a href="/contact/2">Tab 3</a></paper-tab>
